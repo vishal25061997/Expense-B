@@ -34,9 +34,8 @@ exports.signup = async (req, res) => {
 };
 
 const generateAccessToken = (id, name, ispremiumuser) => {
-    return jwt.sign({ userId : id, name: name, ispremiumuser } ,'secretkey');
-}
-
+  return jwt.sign({ userId: id, name: name, ispremiumuser }, "secretkey");
+};
 
 exports.login = async (req, res) => {
   try {
@@ -54,17 +53,15 @@ exports.login = async (req, res) => {
           throw new Error("Something went wrong");
         }
         if (result === true) {
-          return res
-            .status(200)
-            .json({
-              success: true,
-              message: "User logged in successfully",
-              token: generateAccessToken(
-                user[0].id,
-                user[0].name,
-                user[0].ispremiumuser
-              ),
-            });
+          return res.status(200).json({
+            success: true,
+            message: "User logged in successfully",
+            token: generateAccessToken(
+              user[0].id,
+              user[0].name,
+              user[0].ispremiumuser
+            ),
+          });
         } else {
           return res
             .status(400)
@@ -79,7 +76,4 @@ exports.login = async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err, success: false });
   }
-};
-
-
-  
+}
