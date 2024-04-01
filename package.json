@@ -1,31 +1,33 @@
 {
-  "name": "expense-b",
+  "name": "backend_expense_tracker",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "\"Expense Tracker backend\"",
+  "main": "app.js",
+  "author": "Yash",
+  "license": "ISC",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vishal25061997/Expense-B.git"
+  "devDependencies": {
+    "nodemon": "^1.19.4"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/vishal25061997/Expense-B/issues"
-  },
-  "homepage": "https://github.com/vishal25061997/Expense-B#readme",
+  
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^5.0.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "jsonwebtoken": "^9.0.2",
+    "dotenv": "^10.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
+    "mysql": "^2.18.1",
     "mysql2": "^3.9.1",
-    "nodemon": "^3.0.3",
+    "pug": "^2.0.3",
+    "razorpay": "^2.9.2",
     "sequelize": "^6.36.0"
   }
 }
